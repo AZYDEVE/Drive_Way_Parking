@@ -15,11 +15,11 @@
 
 ### Instructions to build:  
 - clone the files to you computer 
-- git npm install , to stall all the dependencies in the package.json file
-- git npm install in the front-react folder
-- at folder root, in terminal type "run npm dev" to turn on the backend server
-- in terminal type "yarn start" to run the front end
-- go to localhoust 3000 to see the web application. 
+- outside of the Frontend Folder type npm install to install all the dependencies in the package.json file
+- npm install in the front-react folder
+- ourside of the Front-end Folder , type "run npm dev" to turn on the backend server
+- type "yarn start" in the frontend folder to run the front end
+- go to localhoust://3000 to see the web application. 
 
 
 
