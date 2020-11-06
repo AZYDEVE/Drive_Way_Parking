@@ -96,12 +96,7 @@ const LoginBtn = () => {
     });
   };
 
-  useEffect(()=>{
-    const data=localStorage.getItem("current-user");
-    if(data){
-      setUserInfo(JSON.parse(data))
-    }else{loginStatus.inStatus=false}
-  },[])
+
 
 
 

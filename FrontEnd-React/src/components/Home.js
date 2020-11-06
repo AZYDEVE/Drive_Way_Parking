@@ -8,18 +8,11 @@ import LoginBtn from  "./LoginBtn"
 
 function Home(props) {
 
-  const [userInfo, setUserInfo] = useState({
-    email : "",
-    password:"",
-    name:""
-  })
-
+  let userInfo=""
 
   const [userActivePost, setUserActivePost] = useState("");
 
   const [dataStatus, setDataStatus] = useState(false);
-
-  const query={email:userInfo.email}
 
   const getInfo = async () => {
     
@@ -33,8 +26,6 @@ function Home(props) {
     await setUserActivePost(data);
     setDataStatus(true)
     //console.log(userActivePost);
-
-    
   };
 /*{email:userInfo.email}*/
 
@@ -42,7 +33,7 @@ function Home(props) {
    useEffect( ()=>{
      const data=localStorage.getItem("current-user");
     if(data){
-      setUserInfo(JSON.parse(data))
+     userInfo= JSON.parse(data)
     }
   },[])
 
@@ -57,7 +48,7 @@ function Home(props) {
       
     } 
 
-  });
+  },[]);
 
 
 

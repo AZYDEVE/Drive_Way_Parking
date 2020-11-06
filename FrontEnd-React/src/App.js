@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
+  NavLink,
   useHistory
 } from "react-router-dom";
 import LoginBtn from "./components/LoginBtn";
@@ -68,15 +69,9 @@ function App() {
           <Navbar.Brand>Drive Way Sharing </Navbar.Brand>
 
           <Nav className="mr-auto">
-            <Nav.Link href={userInfo === "" ? "" : "./home"}>
-              {userInfo === "" ? "" : "Home"}
-            </Nav.Link>
-            <Nav.Link href={userInfo === "" ? "" : "./createpost"}>
-              {userInfo === "" ? "" : "Create Post"}
-            </Nav.Link>
-            <Nav.Link href={userInfo === "" ? "" : "./searchpage"}>
-              {userInfo === "" ? "" : "Search Post"}
-            </Nav.Link>
+            <NavLink to="./home">Home</NavLink>
+            <NavLink to ="./createpost">Create Post</NavLink>
+            <NavLink to="./searchpage">Search Post</NavLink>
           </Nav>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text >
